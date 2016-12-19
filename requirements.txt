@@ -1,0 +1,12 @@
+flask
+sqlalchemy
+flask-login
+flask-script
+flask-migrate
+request
+Werkzeug
+itsdangerous
+mistune
+jsonschema
+nose
+psycopg2
