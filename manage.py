@@ -1,3 +1,5 @@
+""" use 'python manage.py run' command to run up application in development environment"""
+
 import os
 from flask.ext.script import Manager
 
@@ -12,3 +14,4 @@ def run():
 
 if __name__ == "__main__":
     manager.run()
+    
