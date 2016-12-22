@@ -18,23 +18,24 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)
-    username = Column(String(1024), unique=True)
-    email = (Column(unique=True))
-    password = ()
-    datetime = Column(DateTime, default=datetime.datetime.now)
-    ig_oauth_token = ()
-    ig_username = ()
-    ig_fullname = ()
-    ig_profile_pic = ()
+    username = Column(String(21), unique=True)
+    email = (Column(String(254), unique=True))
+    password = (Column(String(100)))
+    created_datetime = Column(DateTime, default=datetime.datetime.now)
+    updated_datetime = Column(DateTime, default=datetime.datetime.now)
+    ig_oauth_token = (Column(String(100)))
+    ig_username = (Column(String(100)))
+    ig_fullname = (Column(String(100)))
+    ig_profile_pic = (Column(String(100)))
     ig_datetime = Column(DateTime, default=datetime.datetime.now)
 
 class Category(Base):
     __tablename__ = "categories"
     
     id = Column(Integer, primary_key = True)
-    category = ()
-    user_id = ()
-    media = ()
-    hero_image = ()
+    category = Column(String(40))
+    user_id = (Column(Integer(40)))
+    media = (Column(String(2000)))
+    hero_image = (Column(String(100)))
 
 Base.metadata.create_all(engine)
