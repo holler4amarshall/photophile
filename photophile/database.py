@@ -33,8 +33,8 @@ class Category(Base):
     __tablename__ = "categories"
     
     id = Column(Integer, primary_key = True)
-    category = Column(String(40))
-    user_id = (Column(Integer(40)))
+    category = (Column(String(40)))
+    user_id = (Column(String(100)))
     media = (Column(String(2000)))
     hero_image = (Column(String(100)))
 
