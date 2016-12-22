@@ -12,14 +12,14 @@ session = Session()
 
 import datetime
 
-from sqlalchemy import Column, Integer, String, Text, DateTime
+from sqlalchemy import Column, Integer, String, Text, DateTime, UniqueConstraint
 
 class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)
-    username = Column(String(1024))
-    email = ()
+    username = Column(String(1024), unique=True)
+    email = (Column(unique=True))
     password = ()
     datetime = Column(DateTime, default=datetime.datetime.now)
     ig_oauth_token = ()
