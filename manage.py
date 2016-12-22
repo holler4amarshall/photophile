@@ -2,8 +2,8 @@
 
 import os
 from flask.ext.script import Manager
-
 from photophile import app
+from photophile.database import session, User, Category, Base
 
 manager = Manager(app)
 
@@ -15,3 +15,6 @@ def run():
 if __name__ == "__main__":
     manager.run()
     
+    
+    
+   
