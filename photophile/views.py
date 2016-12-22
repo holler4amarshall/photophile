@@ -13,6 +13,10 @@ def get_login():
 @app.route("/create-account")
 def get_create_account():
     return render_template("create_account.html")
+    
+@app.route("/search")
+def get_search():
+    return render_template("search.html")
 
     
     
