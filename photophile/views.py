@@ -28,6 +28,13 @@ def get_create_account():
 @app.route("/search")
 def get_search():
     return render_template("search.html")
+    
+@app.route('/search', methods=['POST'])
+def submit_search():
+
+    query = request.form['search'].strip()
+    return query
+
 
     
     
