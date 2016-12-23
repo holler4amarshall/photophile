@@ -2,6 +2,17 @@ from flask import render_template
 
 from photophile import app
 
+from keys import *
+
+def authenticate(): 
+    """authenticate instagram credentials to get secret key"""
+    import oauth2client.file
+    import oauth2client.client_id
+    import oauth2client.tools
+    storage = oauth2client.file.Storage("credentials.dat")
+    credentials = storage.get()
+	
+
 @app.route("/")
 def get_index():
     return render_template("index.html")
